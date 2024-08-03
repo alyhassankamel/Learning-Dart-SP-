@@ -89,9 +89,35 @@ void main() {
   print(y.remove(1)); //there is also remove last and remove range of index
   print(y);
   y.clear(); //[]
-  print(y);*/
+  print(y);
 
   //Arrays: Sets
-  Set<int> x = {1, 1, 1, 1}; //in sets, duplicates cancel out eachother
+  Set<int> x = {1, 1, 2, 2, 3}; //in sets, duplicates cancel out eachother
   print(x);
+  print(x.toList()[
+      0]); /* to extract an elemet in a set you muct convert 
+  into a list and then write the index iof the intended element */
+  print(x.elementAt(0)); // or do it this way 
+  List<int> myList = [1, 1, 2, 2, 3, 3];
+  Set<int> y = Set.from(myList); // this is used to convert a list into a set
+  print(y);
+
+  Set<String> names = {"Aly", "Hassan", "Mohamed", "Kamel"};
+  print(names.indexed); //((0, Aly), (1, Hassan), (2, Mohamed), (3, Kamel))
+  //var.add()  var.remove() var.clear() var.addAll() var.contains() work exactly like in lists
+  
+  //Arrays: Map
+  // the key difference of a map is that you can choose you r numbering system
+  //syntax:
+  //map<numbering type,data type> variable = {numbering : data, numbering : data ......};
+  //example:
+  Map<int, String> names = {1: "Aly", 2: "Hassan", 10: "Mohamed"};
+  print(names);
+  print(names[10]);
+  Map<String, int> contact = {"Aly": 24106066, "Phone": 01100830268};
+  print("Which phone number do you want? (Home/ Phone)");
+  String? which = stdin.readLineSync()!;
+  print(contact[which]);
+  //var.add()  var.remove() var.clear() var.addAll() var.contains() work exactly like in lists
+  */
 }
